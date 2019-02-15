@@ -17,7 +17,7 @@ from random import choice
 from datetime import datetime
 
 
-TOKEN = "" # add yours
+TOKEN = getToken("token")
 PREFIX = '>'
 DESCRIPTION = "Sekuurytrön Discord bot"
 
@@ -391,6 +391,11 @@ async def egg(ctx, nickname):
 
 
 # MISC
+def getToken(token_file):
+    """ More secure way to apply token """
+    token = open(token_file).read().rstrip('\n')
+    return token
+
 def logException(author, exception):
     """ Proper way to log exceptions """
     now = date()
