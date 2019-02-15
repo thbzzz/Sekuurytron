@@ -17,7 +17,6 @@ from random import choice
 from datetime import datetime
 
 
-TOKEN = getToken("token")
 PREFIX = '>'
 DESCRIPTION = "Sekuurytrön Discord bot"
 
@@ -456,4 +455,5 @@ def date():
     return dic
 
 ### EXECUTION ###
+TOKEN = getToken("token")
 client.run(TOKEN)
