@@ -1,0 +1,2 @@
+# Sekuurytron
+Sekuurytron Discord bot
