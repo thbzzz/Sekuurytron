@@ -326,7 +326,7 @@ async def ctf(ctx, ctftime_url, login=None, password=None):
 
 # RANDOM TEAMS
 @client.command()
-async def random_teams(nb):*
+async def random_teams(nb):
     """ To choose is to renounce """
     nicknames = [
         '0xShiroKuma',
