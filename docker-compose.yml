@@ -1,0 +1,6 @@
+version: '3'
+services:
+    sekuurytron:
+        image: sekuurytron
+        container_name: sekuurytron
+        restart: unless-stopped
