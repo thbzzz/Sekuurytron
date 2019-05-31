@@ -18,7 +18,7 @@ from datetime import datetime
 
 
 PREFIX = '>'
-DESCRIPTION = "Sekuurytrön Discord bot"
+DESCRIPTION = "Sekuurytron Discord bot"
 
 client = commands.Bot(command_prefix=PREFIX, description=DESCRIPTION)
 
@@ -26,7 +26,9 @@ client = commands.Bot(command_prefix=PREFIX, description=DESCRIPTION)
 # EVENTS
 @client.event
 async def on_ready():
-    await client.change_presence(game=discord.Game(name=randomGameStatus()))
+    game = discord.Game(name=randomGameStatus())
+    status = discord.Status.online
+    await client.change_presence(activity=game, status=status)
     print("[+] Login successful")
     print("[+] Username:", client.user.name)
     print("[+] ID:", client.user.id)
